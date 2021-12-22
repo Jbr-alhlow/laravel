@@ -101,13 +101,30 @@ header start-->
                 </div>
             </div>
         </li>
+        @php
+    $var= Auth::user()->gender
+@endphp
+
+
         <li class="nav-item dropdown mr-30">
-            <a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button"
+            @if ($var=="male")
+
+            <a class="nav-link nav-pill user-avatar"  href="/profile" role="button"
                 aria-haspopup="true" aria-expanded="false">
                 <img src="{{ URL::asset('assets/images/user_icon.png') }}" alt="avatar">
 
 
             </a>
+@endif
+@if ($var=="female")
+
+<a class="nav-link nav-pill user-avatar"  href="/profile" role="button"
+aria-haspopup="true" aria-expanded="false">
+<img src="{{ URL::asset('assets/images/female.png') }}" alt="avatar">
+
+
+</a>
+@endif
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header">
                     <div class="media">

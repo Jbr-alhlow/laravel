@@ -23861,3 +23861,26 @@ div.style-customizer .content-chooser input[type=radio]:checked ~ label {
     padding: 6px 19px !important; }
   .fc-right .fc-button-group .fc-button {
     padding: 6px 13px !important; } }
+
+  .reg1{
+    background-color: #84ba3f;
+    margin-right: 0;
+    margin-bottom: 4px;
+    color: #ffffff;
+    border:solid #84ba3f;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    height: 45px;
+    margin-right:50px;
+  }
+  .reg1:hover
+  {
+    background-color:  #626262;
+    border:solid #626262; }

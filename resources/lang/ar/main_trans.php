@@ -4,7 +4,7 @@ return [
 
     'Dashboard'=>'الرئيسية',
     'Dashboard_page'=>'لوحة التحكم',
-    'Main_title'=>'برنامج مورا سوفت لادارة المدارس',
+    'Main_title'=>'jbr',
     'Programname' => 'برنامج مورا سوفت لادارة المدارس',
     'change_language'=>'تغير اللغة',
     'Grades'=>'المراحل الدراسية',

@@ -1,3 +1,9 @@
+<head>
+    <title>register-jbr</title>
+    <link href="{{ URL::asset('assets/css/css.css') }}" rel="stylesheet">
+</head>
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -10,6 +16,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -60,10 +67,40 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        <div class="form-group row">
+
+                            <label for="gender" class="col-md-4 col-form-label text-md-right"> Gender </label>
+
+
+
+                            <div class="col-md-6" style="padding-top: 8px">
+
+                                <input id="gender-m" type="radio" name="gender" value="male">
+
+                                <label for="gender-m"> Male </label>
+
+                                <input id="gender-f" type="radio" name="gender" value="female">
+
+                                <label for="gender-f"> Female </label>
+
+
+
+                                @if ($errors-> has ('gender'))
+
+                                    <span class="invalid-feedback">
+
+                                        <strong> {{$errorS-> first ('gender')}} </strong>
+
+                                    </span>
+
+                                 @endif
+
+                            </div>
+                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" id="f4">
                                     {{ __('Register') }}
                                 </button>
                             </div>
